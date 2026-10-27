@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>课堂维护中</title>
+<style>
+  :root { --bg:#f6f1ea; --card:#fffdf9; --ink:#2b2420; --muted:#7a6d64; --accent:#b8553a; --line:#e8ded3; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#1b1820; --card:#24202a; --ink:#f1ebe4; --muted:#a99f96; --accent:#e07a5f; --line:#3a3440; } }
+  * { box-sizing:border-box; }
+  body { margin:0; min-height:100vh; display:flex; align-items:center; justify-content:center; padding:24px 16px;
+         background:var(--bg); color:var(--ink); font:16px/1.75 -apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif; }
+  .card { width:100%; max-width:440px; background:var(--card); border:1px solid var(--line); border-radius:16px; padding:32px 24px; }
+  .tag { display:inline-block; font-size:13px; color:var(--accent); border:1px solid var(--accent); border-radius:999px; padding:2px 12px; }
+  h1 { font-size:24px; margin:16px 0 8px; }
+  p { margin:0 0 12px; color:var(--muted); }
+  .ok { color:var(--ink); }
+  .wx { margin-top:20px; padding:16px; border-radius:12px; background:var(--bg); text-align:center; }
+  .wx small { display:block; color:var(--muted); font-size:13px; }
+  .wx b { font-size:20px; letter-spacing:.5px; user-select:all; }
+  button { margin-top:10px; font:inherit; font-size:14px; border:0; border-radius:8px; padding:6px 16px; background:var(--accent); color:#fff; }
+</style>
+</head>
+<body>
+<main class="card">
+  <span class="tag">维护中</span>
+  <h1>课堂正在维护升级</h1>
+  <p>这几天网站可能暂时打不开，给你添麻烦了。</p>
+  <p class="ok">你已购的课程、学习进度都保存着，不受影响。</p>
+  <p>恢复后会第一时间通知大家。期间有任何问题，加我微信直接问。</p>
+  <div class="wx">
+    <small>石老湿的微信号</small>
+    <b id="wx">__WECHAT_ID__</b><br>
+    <button type="button" onclick="navigator.clipboard&&navigator.clipboard.writeText(document.getElementById('wx').textContent).then(()=>{this.textContent='已复制'})">复制微信号</button>
+  </div>
+</main>
+</body>
+</html>
